@@ -11,7 +11,7 @@ package jpianoforte;
  * @author PeTrA
  * make musical note class
  */
-public class jpfMakeMusicalNote {
+public class JpfMakeMusicalNote {
 	/**
 	 * Piano Musical Note :: Key Board of Piano.
 	 * 
@@ -29,7 +29,7 @@ public class jpfMakeMusicalNote {
 	 */
 	private int keyNumber;
 	
-	public jpfMakeMusicalNote() {
+	public JpfMakeMusicalNote() {
 		resetKeyNumber();
 	}
 	

@@ -16,11 +16,11 @@ import javax.sound.midi.Synthesizer;
  * @author PeTrA
  * play piano keyboard sound class
  */
-public class jpfSound {
+public class JpfSound {
 	private int INSTRUMENT = 1;
 	private MidiChannel CHANNEL;
 	
-	public jpfSound() throws MidiUnavailableException {
+	public JpfSound() throws MidiUnavailableException {
 		this.CHANNEL = getChannel(this.INSTRUMENT);
 	}
 	
