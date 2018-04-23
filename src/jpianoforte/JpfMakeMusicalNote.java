@@ -27,6 +27,7 @@ public class JpfMakeMusicalNote {
 	 * 88 KEY, 52 WHITE KEY, 36 BLACK KEY.
 	 * A4 = 440 Hz
 	 */
+	
 	private int keyNumber;
 	
 	public JpfMakeMusicalNote() {
@@ -55,7 +56,7 @@ public class JpfMakeMusicalNote {
 		}else if(_keyNote.equals("B0")) {
 			
 		}else if(_keyNote.equals("C1")) {
-			
+			                                                                          
 		}else if(_keyNote.equals("C1#")) {
 			
 		}else if(_keyNote.equals("D1")) {
