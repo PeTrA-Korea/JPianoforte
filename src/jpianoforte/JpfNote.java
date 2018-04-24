@@ -31,10 +31,13 @@ public class JpfNote {
 	 * <<length>> : Integer
 	 * 1, 1/2, 1/4, 1/8, 1/16, 1/32, 1/64
 	 * 
-	 * <<staccato>> : boolean
+	 * <<staccato>> : boolean (Origin Staccato)
 	 * True, False
 	 * 
 	 * <<rest>> : boolean
+	 * True, False
+	 * 
+	 * <<pedal>> : boolean (Damper Pedal)
 	 * True, False
 	 */
 	
@@ -42,12 +45,14 @@ public class JpfNote {
 	private double length;
 	private boolean staccato;
 	private boolean rest;
+	private boolean pedal;
 	
-	public JpfNote(List<String> _code, double _length, boolean _staccato, boolean _rest) {
+	public JpfNote(List<String> _code, double _length, boolean _staccato, boolean _rest, boolean _pedal) {
 		this.code = _code;
 		this.length = _length;
 		this.staccato = _staccato;
 		this.rest = _rest;
+		this.pedal = _pedal;
 	}
 	
 	public List<String> getCode(){
@@ -66,6 +71,10 @@ public class JpfNote {
 		return this.rest;
 	}
 	
+	public boolean getPedal() {
+		return this.pedal;
+	}
+	
 	public void setCode(List<String> _code) {
 		this.code = _code;
 	}
@@ -80,5 +89,9 @@ public class JpfNote {
 	
 	public void setRest(boolean _rest) {
 		this.rest = _rest;
+	}
+	
+	public void setPedal(boolean _pedal) {
+		this.pedal = _pedal;
 	}
 }

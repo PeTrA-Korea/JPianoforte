@@ -41,8 +41,8 @@ public class JpfSound {
 	 * @throws InterruptedException 
 	 */
 	public void touchKeyboard(final String _keyNote, final long _length) throws InterruptedException {
-		JpfMakeMusicalNote jpfMakeMusicalNote = new JpfMakeMusicalNote();
-		_touchKeyboard(jpfMakeMusicalNote.changeKeyNoteToMidiNote(_keyNote), _length);
+//		JpfMakeMusicalNote jpfMakeMusicalNote = new JpfMakeMusicalNote();
+//		_touchKeyboard(jpfMakeMusicalNote.changeKeyNoteToMidiNote(_keyNote), _length);
 		return;
 	}
 	

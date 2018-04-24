@@ -28,27 +28,41 @@ public class JpfMakeMusicalNote {
 	 * A4 = 440 Hz
 	 */
 	
-	private int keyNumber;
+	private JpfNote jpfNote;
+	private int midiNoteNumber;
+	private int[] midiNote;
 	
 	public JpfMakeMusicalNote() {
-		resetKeyNumber();
+		this.jpfNote = null;
+		this.midiNoteNumber = -1;
+		this.midiNote = new int[5];
 	}
 	
-	private void resetKeyNumber() {
-		this.keyNumber = -1;
-	}
-	
-	public int changeKeyNoteToMidiNote(String _keyNote) {
-		return _changeKeyNoteToMidiNote(_keyNote);
+	public void setJpfNote(JpfNote _jpfNote) {
+		this.jpfNote = _jpfNote;
 	}
 	
 	/**
-	 * chamge key note to java midi note function
+	 * change the piano code to midi note
+	 * @param _keyNote
+	 * @return int[] miniNote 
+	 */
+	public int[] changeKeyNoteToMidiNote() {
+		this.midiNote = null;
+		this.midiNote = new int[5];
+		for(int i = 0; i < 5; i++) {
+			this.midiNote[i] = _changeKeyNoteToMidiNote(this.jpfNote.getCode().get(i));	//	Linked List of piano code
+		}
+		return this.midiNote;
+	}
+	
+	/**
+	 * change key note to java midi note function
 	 * @param _keyNote
 	 * @return this.keyNote
 	 */
 	private int _changeKeyNoteToMidiNote(String _keyNote) {
-		resetKeyNumber();
+		this.midiNoteNumber = -1;
 		if(_keyNote.equals("A0")) {
 			
 		}else if(_keyNote.equals("A0#")) {
@@ -227,7 +241,7 @@ public class JpfMakeMusicalNote {
 			
 		}
 		
-		return this.keyNumber;
+		return this.midiNoteNumber;
 	}
 	
 }
