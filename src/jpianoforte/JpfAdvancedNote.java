@@ -43,8 +43,6 @@ public class JpfAdvancedNote {
 	 * - DAMPER : damper dedal
 	 * - SOFT : soft pedal
 	 * - SOSTENUTO : sostenuto pedal (grand)
-	 * 
-	 * 
 	 */
 	
 	private List<String> code = new LinkedList<>();

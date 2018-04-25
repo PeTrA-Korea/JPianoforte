@@ -27,6 +27,8 @@ public class JpfPlayer {
 		jpfMakeMusicalNote.setJpfNote(_jpfNote);
 		this.note = jpfMakeMusicalNote.changeKeyNoteToMidiNote();
 		
-		
+		for(;;) {
+			
+		}
 	}
 }
