@@ -94,4 +94,18 @@ public class JpfNote {
 	public void setPedal(boolean _pedal) {
 		this.pedal = _pedal;
 	}
+	
+	/**
+	 * get disposable note function
+	 * @param _code
+	 * @param _length
+	 * @param _staccato
+	 * @param _rest
+	 * @param _pedal
+	 * @return (JpfNote)temp
+	 */
+	public static JpfNote getDisposableNote(List<String> _code, double _length, boolean _staccato, boolean _rest, boolean _pedal) {
+		JpfNote temp = new JpfNote(_code, _length, _staccato, _rest, _pedal);
+		return temp;
+	}
 }
