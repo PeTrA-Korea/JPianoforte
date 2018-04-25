@@ -68,6 +68,7 @@ public class JpfAdvancedNote {
 	 * @param _staccato
 	 * @param _rest
 	 * @param _pedal
+	 * @return
 	 */
 	public void setJpfAdvancedNote(List<String> _code, int _length, String _staccato, boolean _rest, String _pedal) {
 		this.code = _code;

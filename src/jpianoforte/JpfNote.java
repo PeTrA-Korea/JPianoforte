@@ -62,6 +62,7 @@ public class JpfNote {
 	 * @param _staccato
 	 * @param _rest
 	 * @param _pedal
+	 * @return
 	 */
 	public void setJpfNote(List<String> _code, double _length, boolean _staccato, boolean _rest, boolean _pedal) {
 		this.code = _code;
