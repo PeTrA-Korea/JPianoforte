@@ -31,19 +31,103 @@ public class JpfAdvancedNote {
 	 * <<length>> : Integer
 	 * 1, 1/2, 1/4, 1/8, 1/16, 1/32, 1/64
 	 * 
-	 * <<staccato>> : String (Origin Staccato)
-	 * STACCATO, STACCATISSIMO, MEZZOSTACCATO
+	 * <<staccato>> : String
+	 * - STACCATO : origin staccato
+	 * - STACCATISSIMO : staccatissimo
+	 * - MEZZOSTACCATO : mezzo staccato
 	 * 
 	 * <<rest>> : boolean
 	 * True, False
 	 * 
-	 * <<pedal>> : boolean (Damper Pedal)
-	 * True, False
+	 * <<pedal>> : String
+	 * - DAMPER : damper dedal
+	 * - SOFT : soft pedal
+	 * - SOSTENUTO : sostenuto pedal (grand)
+	 * 
+	 * 
 	 */
 	
 	private List<String> code = new LinkedList<>();
-	private double length;
-	private boolean staccato;
+	private int length;
+	private String staccato;
 	private boolean rest;
-	private boolean pedal;
+	private String pedal;
+	
+	public JpfAdvancedNote(List<String> _code, int _length, String _staccato, boolean _rest, String _pedal) {
+		this.code = _code;
+		this.length = _length;
+		this.staccato = _staccato;
+		this.rest = _rest;
+		this.pedal = _pedal;
+	}
+	
+	/**
+	 * reset jpf advanced note.
+	 * @param _code
+	 * @param _length
+	 * @param _staccato
+	 * @param _rest
+	 * @param _pedal
+	 */
+	public void setJpfAdvancedNote(List<String> _code, int _length, String _staccato, boolean _rest, String _pedal) {
+		this.code = _code;
+		this.length = _length;
+		this.staccato = _staccato;
+		this.rest = _rest;
+		this.pedal = _pedal;
+	}
+	
+	public void setCode(List<String> _code) {
+		this.code = _code;
+	}
+	
+	public void setLength(int _length) {
+		this.length = _length;
+	}
+	
+	public void setStaccato(String _staccato) {
+		this.staccato = _staccato;
+	}
+	
+	public void setRest(boolean _rest) {
+		this.rest = _rest;
+	}
+	
+	public void setPedal(String _pedal) {
+		this.pedal = _pedal;
+	}
+	
+	public List<String> getCode(){
+		return this.code;
+	}
+	
+	public int getLength() {
+		return this.length;
+	}
+	
+	public String getStaccato() {
+		return this.staccato;
+	}
+	
+	public boolean getRest() {
+		return this.rest;
+	}
+	
+	public String getPedal() {
+		return this.pedal;
+	}
+	
+	/**
+	 * get disposable note function
+	 * @param _code
+	 * @param _length
+	 * @param _staccato
+	 * @param _rest
+	 * @param _pedal
+	 * @return (JpfAdvancedNote)temp
+	 */
+	public JpfAdvancedNote getDisposableNote(List<String> _code, int _length, String _staccato, boolean _rest, String _pedal) {
+		JpfAdvancedNote temp = new JpfAdvancedNote(_code, _length, _staccato, _rest, _pedal);
+		return temp;
+	}
 }

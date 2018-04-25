@@ -55,6 +55,22 @@ public class JpfNote {
 		this.pedal = _pedal;
 	}
 	
+	/**
+	 * reset jpf note
+	 * @param _code
+	 * @param _length
+	 * @param _staccato
+	 * @param _rest
+	 * @param _pedal
+	 */
+	public void setJpfNote(List<String> _code, double _length, boolean _staccato, boolean _rest, boolean _pedal) {
+		this.code = _code;
+		this.length = _length;
+		this.staccato = _staccato;
+		this.rest = _rest;
+		this.pedal = _pedal;
+	}
+	
 	public List<String> getCode(){
 		return this.code;
 	}
