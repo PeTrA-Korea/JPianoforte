@@ -41,7 +41,7 @@ public class JpfSound {
 	 * @throws InterruptedException 
 	 */
 	public void touchKeyboard(final int _midiNote, final long _length) throws InterruptedException {
-		_touchKeyboard(_midiNote, _length);
+		playMidiPlayer(_midiNote, _length);
 		return;
 	}
 	
@@ -52,7 +52,7 @@ public class JpfSound {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	private void _touchKeyboard(final int _midiNote, final long _length) throws InterruptedException{
+	private void playMidiPlayer(final int _midiNote, final long _length) throws InterruptedException{
 		this.CHANNEL.noteOn(_midiNote, 50);
 		Thread.sleep(_length);
 		this.CHANNEL.noteOff(_midiNote, 50);
