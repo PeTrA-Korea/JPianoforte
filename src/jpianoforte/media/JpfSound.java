@@ -40,9 +40,8 @@ public class JpfSound {
 	 * making
 	 * @throws InterruptedException 
 	 */
-	public void touchKeyboard(final String _keyNote, final long _length) throws InterruptedException {
-//		JpfMakeMusicalNote jpfMakeMusicalNote = new JpfMakeMusicalNote();
-//		_touchKeyboard(jpfMakeMusicalNote.changeKeyNoteToMidiNote(_keyNote), _length);
+	public void touchKeyboard(final int _midiNote, final long _length) throws InterruptedException {
+		_touchKeyboard(_midiNote, _length);
 		return;
 	}
 	
@@ -53,10 +52,10 @@ public class JpfSound {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	private void _touchKeyboard(final int _musicalNote, final long _length) throws InterruptedException{
-		this.CHANNEL.noteOn(_musicalNote, 50);
+	private void _touchKeyboard(final int _midiNote, final long _length) throws InterruptedException{
+		this.CHANNEL.noteOn(_midiNote, 50);
 		Thread.sleep(_length);
-		this.CHANNEL.noteOff(_musicalNote, 50);
+		this.CHANNEL.noteOff(_midiNote, 50);
 		return;
 	}
 	
